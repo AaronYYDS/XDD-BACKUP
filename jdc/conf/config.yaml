@@ -1,0 +1,21 @@
+mode: balance #模式 balance(均衡模式)、parallel(平行模式)
+containers: #容器，可配置多个
+  - address: http://192.168.31.233:5700 #青龙2.2、青龙2.8、v1v2v3v4v5访问地址
+    username: admin #用户名
+    password: admin #密码
+    weigth: 3 #权重 balance模式下权重越高分得的ck越多，默认1
+    mode: parallel #单独对容器进行模式设置
+  - address: http://192.168.31.233:5525
+    username: admin
+    password: admin
+  - path: /Users/cdle/Desktop/jd_study/jdc/config.sh #本地配置文件路径 v1v2v3v4v5和不知名容器的配置
+  - path: /Users/cdle/Desktop/jd_study/jdc/list.sh
+theme:  #自定义主题，支持本地、网络路径
+static: ./static #静态文件 便于自定义二维码页面时，引入css、js等文件
+master: #管理员账户pin，有多个用'&'拼接
+database:  #数据库位置，默认./.jdc.db
+qywx_key:  #企业微信推送key
+daily_push: #定时任务
+resident: #均衡模式下所有容器共同的账号pin，有多个用'&'拼接。不建议填写，后续实现指定账号助力功能。
+#自定义ua
+user_agent:  
