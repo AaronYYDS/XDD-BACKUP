@@ -11,3 +11,7 @@
 - config.yaml：重要参数配置
 
 5）配置完毕后 保存并重启程序，可以使用screen把程序窗口化。
+
+## 自编译
+
+如果你需要 你可以在 https://github.com/AaronYYDS/XDD-BACKUP/releases 下载已经编译好的版本
